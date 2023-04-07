@@ -1,7 +1,8 @@
 <?php
 namespace App\model;
-class Create_user{
-    private $connect;
+use App\Connexion;
+class Create_user extends Connexion{
+    // private $connect;
     private $db_table = "users";
     public $id;
     public $username;
@@ -9,8 +10,9 @@ class Create_user{
     public $pass;
 
     // Connexion at db
-    public function _construct($db){
-        $this->connect=$db;
+    public function __construct($db){
+        parent::__construct();
+
     }
 
     public function createuser(){
@@ -19,7 +21,7 @@ class Create_user{
                         username =:username,
                         email= :email,
                         pass = :pass";
-        $stmt = $this->connect->prepare($sqlQuery);
+        $stmt = $this->conn->prepare($sqlQuery);
         
         // sanitize
         $this->name=htmlspecialchars(strip_tags($this->username));

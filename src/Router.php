@@ -15,12 +15,11 @@ class Router{
     }
     public function run():self{
         $match = $this->router->match();
-        
         $view =$match['target'];
         ob_start();
         require $this->viewPath . DIRECTORY_SEPARATOR . $view . '.php';
         $content = ob_get_clean();
-        require $this->viewPath . DIRECTORY_SEPARATOR .  'templates/layout.php';
+        require $this->viewPath . DIRECTORY_SEPARATOR .  'layout.php';
         return $this;
     }
 

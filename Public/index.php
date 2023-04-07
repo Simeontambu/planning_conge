@@ -4,6 +4,6 @@ require '../vendor/autoload.php';
 
 $router = new App\Router (dirname(__DIR__) . '/src/view');
 $router
-    ->get('/','templates/home','Accueil')
-    ->get('/connecter', 'templates/auth', 'authentification')
+    ->get('/','auth/login','Accueil')
+    ->get('/register', 'auth/auth', 'authentification')
     ->run();

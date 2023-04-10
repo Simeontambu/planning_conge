@@ -1,0 +1,45 @@
+/**
+  simple style for login and register
+*/
+.login {
+  width: 95%;
+  max-width: 26em;
+  margin: 7em auto;
+  height: 480px;
+  border-radius: 5px;
+  background-color: rgb(183, 187, 176);
+}
+.login > h1 {
+  text-align: center;
+  padding-top: 6px;
+}
+.flex {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+}
+.flex-input {
+  width: 300px;
+  margin: 1em auto;
+  height: 40px;
+  border-radius: 7px;
+  font-size: 20px;
+}
+.submit {
+  width: 200px;
+  margin: 1em auto;
+  height: 40px;
+  border-radius: 7px;
+  font-size: 20px;
+}
+p {
+  text-align: center;
+}
+.register {
+  height: 530px;
+  margin: 5em auto;
+}
+.alert {
+  color: red;
+  text-transform: uppercase;
+}

@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 use App\Connexion;
 
@@ -40,22 +41,24 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['pass'])) {
         }
     }
 }
-
+$title = "register";
 ?>
-
+<div class="login register">
 <h1>S'inscrire</h1>
 <?php if (!empty($info)): {}?>
-				<div class="alert alert-danger">
-				<?php foreach ($info as $infos): ?>
-				<h3><?=$infos;?></h3>
-				<?php endforeach;?>
-</div>
+
+			<?php foreach ($info as $infos): ?>
+			<p class="alert alert-danger"><?=$infos;?></p>
+			<?php endforeach;?>
+
 <?php endif;?>
 <form action="" methode="POST">
-<input type="text" placeholder="Nom d'utilisateur" name="username" required>
-<input type="email" placeholder="Adresse email" name="email" required>
-<input type="text" placeholder="Mot de passe" name="pass"required>
-<input type="submit" name="submit" value="S'inscrire" class="box-button" />
+<div class="flex">
+<input class="flex-input" type="text" placeholder="Nom d'utilisateur" name="username" required>
+<input class="flex-input" type="email" placeholder="Adresse email" name="email" required>
+<input class="flex-input" type="text" placeholder="Mot de passe" name="pass"required>
+<input class="submit" type="submit" name="submit" value="S'inscrire" class="box-button" />
 <p class="box-register">Déjà inscrit? <a href="/">Connectez-vous ici</a></p>
-
+</div>
 </form>
+</div>

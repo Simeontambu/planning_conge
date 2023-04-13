@@ -15,7 +15,7 @@ if (isset($_REQUEST['username'], $_REQUEST['pass'])) {
     $query = "SELECT * FROM users WHERE username='$username'  and  pass='" . $password . "'";
     $res = mysqli_query($database, $query);
     $info = array();
-    if (mysqli_num_rows($res) === 1) {
+    if (mysqli_num_rows($res) == 1) {
         $users = mysqli_fetch_assoc($res);
 
         // Check if the user is an administrator or a user
@@ -36,9 +36,9 @@ $title = "login";
 <h1>Se connecter</h1>
 <?php if (!empty($info)): {}?>
 
-				<?php foreach ($info as $infos): ?>
-				<p class="alert alert-danger"><?=$infos;?></p>
-				<?php endforeach;?>
+						<?php foreach ($info as $infos): ?>
+						<p class="alert alert-danger"><?=$infos;?></p>
+						<?php endforeach;?>
 
 <?php endif;?>
 

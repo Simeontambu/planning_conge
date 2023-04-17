@@ -1,6 +1,7 @@
 <?php
 require '../vendor/autoload.php';
 define('cssroot', 'http://localhost/web/gestion_conge/public');
+define('jsroot', 'http://localhost/web/gestion_conge/public');
 $router = new App\Router(dirname(__DIR__) . '/src/view');
 $router
     ->get('/', 'auth/login', 'login')

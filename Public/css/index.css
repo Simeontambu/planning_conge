@@ -1,3 +1,7 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
 /**
   simple style for login and register
 */
@@ -53,8 +57,9 @@ p {
 }
 .nav-home {
   /* text-align: center; */
+
   width: 250px;
-  height: 630px;
+  height: 653px;
   background-color: rgb(30, 34, 33);
 }
 .home-user {
@@ -80,4 +85,74 @@ ul li a {
 ul li:hover {
   color: rgb(218, 216, 216);
   background-color: blue;
+}
+
+/*
+*style ask leave and planning
+----------------
+-----------------
+*/
+.container-center {
+  /* background-color: rgb(30, 34, 33); */
+  width: 800px;
+  margin: 1em auto;
+  height: 600px;
+}
+.demande-conge {
+  width: 700px;
+  margin: 1em auto;
+  padding-top: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.ask-title {
+  background-color: rgb(218, 216, 216);
+  border: 1px solid rgb(218, 216, 216);
+  height: 50px;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .form-group {
+  flex: 1;
+
+  text-align: center;
+  margin: 10px;
+}
+select {
+  width: 149px;
+}
+.operation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+button {
+  margin-top: 8px;
+  border-radius: 5px;
+  width: 200px;
+  height: 30px;
+  margin-left: 80px;
+}
+
+/*
+ style table
+*/
+table {
+  margin: 2em auto;
+}
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+th,
+td {
+  padding: 7px;
+}
+.no-data {
+  text-align: center;
 }

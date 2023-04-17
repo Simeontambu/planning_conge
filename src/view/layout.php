@@ -10,6 +10,6 @@
 <body>
 
     <?=$content;?>
-
+<script src="<?php echo jsroot; ?>/js/index.js"></script>
 </body>
 </html>

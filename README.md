@@ -48,7 +48,7 @@ Voici quelques images de la version desktop de ce projet:
 
 # Comment tester ce référentiel
 
-Le projet est en face de réalisation ......
+Le projet est en phase de réalisation ......
 
 ## Exécutez
 

@@ -14,7 +14,7 @@ Son siège social est établi à Kinshasa, au n°95 du boulevard du 30 Juin, com
 
 # Version Desktop
 
-La version desktop de ce projet à éte réalisé avec C# comme langage de programmation et Miscrosoft sqlserver comme sgbd.
+La version desktop de ce projet a été réalisée avec C# comme langage de programmation et Miscrosoft sqlserver comme sgbd.
 
 Voici quelques images de la version desktop de ce projet:
 

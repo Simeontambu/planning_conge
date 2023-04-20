@@ -25,6 +25,8 @@ function loadHTMLTableagent(data){
         table.innerHTML = "<tr><td class ='no-data' colspan='10'>Pas de données</td></tr>";
     }
 }
+
+// window call
 const conge = document.querySelector('.leave');
 conge.addEventListener('click',fenetre)
 function fenetre(){

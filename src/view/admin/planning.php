@@ -1,3 +1,13 @@
+<?php
+use App\Connexion;
+$connexion = new Connexion();
+$database = $connexion->getConnection();
+/**
+ * selection of data to fill our drop-down lists
+ */
+$selectleave = mysqli_query($database, "SELECT code_conge FROM conge");
+$selectagent = mysqli_query($database, "SELECT nom FROM agent");
+?>
 <div class="container-center">
 <div class="demande-conge">
 <form action="" method="POST" >
@@ -18,15 +28,19 @@
     <div class="form-group">
         <label id="" for="">code conge</label>
         <select name="objet" id="" class="">
-            <option value=""></option>
-            <option value=""></option>
+            <?php while ($data = mysqli_fetch_array($selectleave)) {?>
+            <option value="<?php echo $data['code_conge'] ?>"><?php echo $data['code_conge'] ?></option>
+            <?php }?>
 
         </select>
     </div>
     <div class="form-group">
-        <label id="inscrit" for="">Matricule agent</label>
-        <select>
-            <option value=""></option>
+        <label id="inscrit" for="">Nom agent</label>
+        <select name="objet" id="" class="">
+            <?php while ($data = mysqli_fetch_array($selectagent)) {?>
+            <option value="<?php echo $data['nom'] ?>"><?php echo $data['nom'] ?></option>
+            <?php }?>
+
         </select>
     </div>
     </div>
